@@ -37,3 +37,15 @@ $screen-xl-min: 1200px;
         @content;
     }
 }
+
+@mixin lateralSpacer ($side, $space) {
+    @if $side == 'l' {
+        margin-left: $space;
+    } @else if $side == 'r' {
+        margin-right: $space;
+    } @else if $side == 't' {
+        margin-top: $space;
+    } @else if $side == 'b' {
+        margin-bottom: $space;
+    }
+}

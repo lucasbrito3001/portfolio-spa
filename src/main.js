@@ -5,13 +5,14 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faBars)
+library.add(faBars, faClose, faGithubSquare)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
