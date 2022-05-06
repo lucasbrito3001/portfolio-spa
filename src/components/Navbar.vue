@@ -28,7 +28,7 @@
 export default {
     data: () => ({
         navItems: [
-            { href: '', text: 'Inicio' },
+            { href: '#', text: 'Inicio' },
             { href: '#about', text: 'Sobre' },
             { href: '#portfolio', text: 'Portfolio' },
             { href: '#contact', text: 'Contatos' },
@@ -39,13 +39,13 @@ export default {
     }),
     computed: {
         setAnimationMenu() {
-            if(this.windowWidth > 768) return ''
+            if(this.windowWidth > 992) return ''
             else if(!this.isActiveAnimations) return 'initialStateMenuMobile'
             else if(this.isShowingMenu) return 'showMenu'
             else return 'hideMenu'
         },
         setAnimationMenuSdw() {
-            if(this.windowWidth > 768) return ''
+            if(this.windowWidth > 992) return ''
             else if(!this.isShowingMenu) return 'showMenuSdw'
             else return 'hideMenuSdw'
         }
@@ -72,7 +72,7 @@ export default {
         font-size: 28px;
     }
 
-    @include md {
+    @include lg {
         position: fixed;
         top: 20px;
         left: 20px;
@@ -89,13 +89,13 @@ export default {
 }
 
 nav {
-    padding: 10px;
+    padding: 20px 40px;
     background-color: transparent;
     position: absolute;
     z-index: 10;
     width: 100vw;
 
-    @include md {
+    @include lg {
         z-index: 3;
         position: fixed;
         display: block;
@@ -116,7 +116,7 @@ nav {
         display: flex;
         align-items: center;
 
-        @include md {
+        @include lg {
             display: block;
         }
 
@@ -125,20 +125,26 @@ nav {
             color: var(--navbar-text);
             display: inline;
             padding: 10px;
+            transition: .4s;
 
 
-            @include md {
+            &:hover {
+                background-color: rgba(44, 43, 43, 0.678);
+                color: white;
+                border-radius: 5px;
+            }
+
+            @include lg {
                 display: block;
 
                 .github-icon {
                     font-size: 28px;
                     margin-right: 10px;
                 }
-                
+
                 &:hover {
-                    background-color: black;
-                    color: white;
-                }
+                    background-color: rgb(0, 0, 0);
+                }   
             }
         }
 
@@ -146,7 +152,7 @@ nav {
             padding: 5px 10px;
             font-weight: 700;
 
-            @include md {
+            @include lg {
                 display: flex;
                 align-items: center;
                 font-size: 22px;
@@ -156,7 +162,7 @@ nav {
         .menu-close {
             display: none;
 
-            @include md {
+            @include lg {
                 display: block;
                 font-size: 32px;
                 padding: 10px 20px;

@@ -1,25 +1,16 @@
 <template>
     <div class="home-article">
-        <h2 class="typing" v-if="showLine >= 1">Olá, seja bem-vindo! <span class="left-spacer"></span> </h2>
-        <h1 class="typing" v-if="showLine >= 2">Meu nome é Lucas de Brito <span class="left-spacer"></span> </h1>
-        <h2 class="typing" v-if="showLine >= 3">E eu sou um desenvolvedor web! <span class="left-spacer"></span> </h2>
+        <div class="home-title">
+            <h2>Olá, seja bem-vindo,</h2>
+            <h1>Meu nome é</h1>
+            <h1 class="lucas">Lucas</h1>
+            <h2 class="web-developer">E eu sou um desenvolvedor web!</h2>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    data: () => ({
-        showLine: 1,
-        stopBlink: false
-    }),
-    mounted () {
-        setTimeout(() => {
-            this.showLine++;
-            setTimeout(() => {
-                this.showLine++;
-            }, 2000)    
-        }, 1500)
-    }
 }
 </script>
 
@@ -29,19 +20,33 @@ export default {
 .home-article {
     position: relative;
     height: 100vh;
-    background: black;
+    width: 100vw;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     align-items: center;
     color: var(--secondary-text);
-    width: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+
+    background-image: url('../assets/bg-1.jpg');
+
+    .home-title {
+        position: relative;
+        width: 50vw;
+
+        @include lg {
+            width: 100vw;
+        }
+    }
 
     h1 {
-        font-size: 38px;
+        font-size: 72px;
 
-        @include md {
-            font-size: 26px;
+        @include lg {
+            font-size: 48px;
         }
     }
 
@@ -49,39 +54,17 @@ export default {
         font-size: 32px;
         font-weight: 500;
 
-        @include md {
-            font-size: 20px;
+        @include lg {
+            font-size: 26px;
         }
     }
 
-    .typing {
-        animation: typingText 4s linear both, blinkCursor .5s steps(40) infinite normal;
-        overflow-x: hidden;
-        white-space: nowrap;
-
-        @include md {
-            animation: typingText 2s linear both, blinkCursor .5s steps(40) infinite normal;
-        }
+    .web-developer {
+        margin-top: 20px;
     }
     
-    @include md {
-        height: 50vh;
-    }
-
-    @keyframes blinkCursor {
-        from {
-            border-right: 2px solid var(--secondary-text);
-        } to {
-            border-right: 2px solid transparent;
-        }
-    }
-
-    @keyframes typingText {
-        from {
-            max-width: 0;
-        } to {
-            max-width: 100%;
-        }
+    @include lg {
+        height: 100vh;
     }
 }
 </style>

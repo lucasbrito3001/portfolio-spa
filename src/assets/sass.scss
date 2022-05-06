@@ -49,3 +49,21 @@ $screen-xl-min: 1200px;
         margin-bottom: $space;
     }
 }
+
+
+
+@keyframes blinkCursor {
+    from {
+        border-right: 2px solid var(--secondary-text);
+    } to {
+        border-right: 2px solid transparent;
+    }
+}
+
+@keyframes typingText {
+    from {
+        max-width: 0;
+    } to {
+        max-width: 250px;
+    }
+}
