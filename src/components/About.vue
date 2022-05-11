@@ -3,13 +3,13 @@
         <div class="container-content">
             <h1 class="general-title" v-if="windowWidth <= 992">Quem sou eu?</h1>
             <div class="about-image">
-                <img :src="require(`../assets/${windowWidth > 992 ? 'perfil-desk' : 'perfil' }.jpeg`)" alt="">
+                <img :src="require(`../assets/about-image.svg`)">
             </div>
             <div class="about-text">
                 <h1 class="general-title" v-if="windowWidth > 992">Quem sou eu?</h1>
                 <p>
-                    Um jovem apaixonado por inovações, desafios e tecnologia,
-                    e é isso que me faz gostar tanto da área de desenvolvimento e programação.
+                    Um jovem apaixonado por inovações, desafios, tecnologia, código e principalmente café!
+                    E é isso que me faz gostar tanto da área de desenvolvimento e programação.
                 </p>
                 <p>
                     A ascensão constante da tecnologia me traz muita curiosidade,
@@ -36,11 +36,9 @@ export default {
 
 .container {
     margin-top: -75px;
-    // z-index: 100;
 
     .container-content {
         position: relative;
-        z-index: 100;
         width: 100%;
 
         box-shadow: 1px 1px 40px 1px rgb(100, 100, 100);
@@ -55,7 +53,7 @@ export default {
 
         .about-text {
             width: calc(100% - 280px);
-            margin-left: 280px;
+            margin-left: 250px;
 
             @include lg {
                 width: 100%;
@@ -75,7 +73,7 @@ export default {
             top: 0;
             left: 0;
             height: 100%;
-            width: 280px;
+            width: 300px;
 
             @include lg {
                 position: relative;
@@ -85,7 +83,9 @@ export default {
             }
 
             img {
-                width: 100%;
+                display: block;
+                margin: auto;
+                width: 240px;
                 height: 100%;
                 border-radius: 10px 0 0 10px;
 

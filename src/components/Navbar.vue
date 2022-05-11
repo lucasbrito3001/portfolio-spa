@@ -92,7 +92,7 @@ nav {
     padding: 20px 40px;
     background-color: transparent;
     position: absolute;
-    z-index: 10;
+    z-index: 500;
     width: 100vw;
 
     @include lg {

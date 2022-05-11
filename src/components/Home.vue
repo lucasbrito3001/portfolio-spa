@@ -28,7 +28,7 @@ export default {
     align-items: center;
     color: var(--secondary-text);
     background-size: cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     padding: 20px;
 
     background-image: url('../assets/bg-1.jpg');
