@@ -12,7 +12,7 @@
                         <h1 class="xp-list-item-title">MOVA P2P</h1>
 
                         <div class="group-xp-position">
-                            <h2>APR 2021 - AGO 2021 - Desenvolvedor Front-end Jr.</h2>
+                            <h2>APR 2021 ~ AGO 2021 - Desenvolvedor Front-end Jr.</h2>
                             <p>
                                 Manutenção e desenvolvimento de páginas web responsivas com NuxtJS.
                             </p>
@@ -22,37 +22,26 @@
                         <h1 class="xp-list-item-title">Lexart labs</h1>
 
                         <div class="group-xp-position">
-                            <h2>MAR 2022: Jr. Software Architect</h2>
+                            <h2>MAR 2022 - Jr. Software Architect</h2>
                             <p>
                                 Manutenção e desenvolvimento de páginas web responsivas, API's REST e gerenciamento de projetos fullstack.
                             </p>
                         </div>
 
                         <div class="group-xp-position">
-                            <h2>DEZ 2021 ~ MAR 2022: Fullstack Developer</h2>
+                            <h2>DEZ 2021 ~ MAR 2022 - Fullstack Developer</h2>
                             <p>
                                 Manutenção e desenvolvimento de páginas web responsivas e API's REST.
                             </p>
                         </div>
                         
                         <div class="group-xp-position">
-                            <h2>JUN 2021 ~ DEZ 2022: Frontend Developer</h2>
+                            <h2>JUN 2021 ~ DEZ 2022 - Frontend Developer</h2>
                             <p>
                                 Manutenção e desenvolvimento de páginas web responsivas.
                             </p>
                         </div>
 
-                    </li>
-                </ul>
-            </section>
-
-            <section class="hobbies">
-                <h2 class="general-title">Hobbies</h2>
-                <hr>
-                <ul class="hobbies-list">
-                    <li class="hobbies-list-item" v-for="(hobby, key) in hobbies" :key="key">
-                        <img :src="hobby.image" :alt="hobby.imageAlt">
-                        <p>{{  hobby.name }}</p>
                     </li>
                 </ul>
             </section>
@@ -79,11 +68,6 @@
 <script>
 export default {
     data: () => ({
-        hobbies: [
-            { name: 'Games', image: require('../assets/game-cyan.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
-            { name: 'Música', image: require('../assets/music-2.svg'), imageAlt: 'imagem com uma pessoa tocando violao' },
-            { name: 'Esportes', image: require('../assets/sport.svg'), imageAlt: 'imagem com uma pessoa jogando futebol' },
-        ],
         skills: [
             "JavaScript",
             "ECMAScript 6+",
@@ -147,7 +131,7 @@ export default {
 
 .container-skills {
     // background-color: rgb(255, 255, 255);
-    margin-top: 50px;
+    // margin-top: 50px;
     color: var(--primary-text);
     background-color: var(--secondary-dark-blue);
     background-position: left 10px;
@@ -240,46 +224,6 @@ export default {
 
             @include md {
                 width: 100%;
-            }
-
-        }
-    }
-
-    .hobbies {
-        width: 100%;
-        margin: 30px 0;
-
-        .hobbies-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: start;
-
-            .hobbies-list-item {
-                width: 33%;
-                color: rgb(255, 255, 255);
-                font-size: 28px;
-                font-weight: 700;
-                border-radius: 3px;
-                padding: 10px;
-                text-align: center;
-
-                img {
-                    width: 180px;
-
-                    @include md {
-                        width: 120px;
-                    }
-                }
-
-                @include lg {
-                    font-size: 22px;
-                }
-
-                @include md {
-                    width: 50%;
-                    font-size: 18px;
-                }
             }
 
         }
