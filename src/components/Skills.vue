@@ -133,12 +133,12 @@ export default {
     // background-color: rgb(255, 255, 255);
     // margin-top: 50px;
     color: var(--primary-text);
-    background-color: var(--secondary-dark-blue);
+    background-color: var(--dark);
     background-position: left 10px;
 
 
     .section-title {
-        background-color: var(--dark-blue);
+        background-color: var(--dark);
         width: 100%;
         height: 20vh;
         display: flex;
@@ -174,7 +174,7 @@ export default {
 
             .xp-list-item-title {
                 font-weight: 700;
-                color: #4508a8;
+                color: var(--purple-text);
                 font-size: 26px;
 
                 @include lg {
@@ -192,7 +192,7 @@ export default {
                 h2 {
                     font-weight: 700;
                     font-size: 24px;
-                    color: var(--light-gray);
+                    color: var(--secondary-text);
     
                     @include lg {
                         font-size: 22px;
@@ -287,7 +287,7 @@ export default {
     }
 
     hr {
-        border: 1px solid rgb(9, 8, 12);
+        border: 1px solid rgb(14, 14, 14);
         margin-bottom: 20px;
     }
 

@@ -35,9 +35,10 @@ export default {
     data: () =>({
         windowWidth: 0,
         hobbies: [
-            { name: 'Games', image: require('../assets/game-cyan.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
-            { name: 'Música', image: require('../assets/music-2.svg'), imageAlt: 'imagem com uma pessoa tocando violao' },
+            { name: 'Games', image: require('../assets/game.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
+            { name: 'Música', image: require('../assets/music.svg'), imageAlt: 'imagem com uma pessoa tocando violao' },
             { name: 'Esportes', image: require('../assets/sport.svg'), imageAlt: 'imagem com uma pessoa jogando futebol' },
+            { name: 'Natureza', image: require('../assets/nature.svg'), imageAlt: 'imagem com uma pessoa jogando futebol' },
         ],
     }),
     mounted() {
@@ -127,7 +128,7 @@ export default {
             align-items: start;
 
             .hobbies-list-item {
-                width: 33%;
+                width: 25%;
                 color: var(--primary-text);
                 font-size: 20px;
                 font-weight: 700;
