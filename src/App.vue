@@ -63,7 +63,8 @@ export default {
     --navbar-text: white;
     --dark-bg: rgb(12, 12, 12);
     --light-gray: #2b2c30;
-    --dark-blue: rgb(3, 2, 19);
+    --dark-blue: rgb(3, 3, 7);
+    --secondary-dark-blue: rgb(7, 6, 10);
 }
 
 body {
