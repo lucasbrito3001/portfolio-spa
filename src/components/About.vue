@@ -17,13 +17,28 @@
                 </p>
             </div>
         </div>
+
+        <section class="hobbies">
+            <h2 class="general-title">Hobbies</h2>
+            <ul class="hobbies-list">
+                <li class="hobbies-list-item" v-for="(hobby, key) in hobbies" :key="key">
+                    <img :src="hobby.image" :alt="hobby.imageAlt">
+                    <p>{{  hobby.name }}</p>
+                </li>
+            </ul>
+        </section>
     </div>
 </template>
 
 <script>
 export default {
     data: () =>({
-        windowWidth: 0
+        windowWidth: 0,
+        hobbies: [
+            { name: 'Games', image: require('../assets/game-cyan.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
+            { name: 'Música', image: require('../assets/music-2.svg'), imageAlt: 'imagem com uma pessoa tocando violao' },
+            { name: 'Esportes', image: require('../assets/sport.svg'), imageAlt: 'imagem com uma pessoa jogando futebol' },
+        ],
     }),
     mounted() {
         this.windowWidth = window.innerWidth
@@ -35,13 +50,17 @@ export default {
 @import "../assets/sass.scss";
 
 .container {
-    margin-top: -75px;
+    
+    .general-title {
+        font-size: 42px;
+    }
 
     .container-content {
+        margin-top: -50px;
         position: relative;
         width: 100%;
 
-        box-shadow: 1px 1px 40px 1px rgb(100, 100, 100);
+        // box-shadow: 1px 1px 40px 1px rgb(100, 100, 100);
         background-color: rgb(255, 255, 255);
 
         border-radius: 10px;
@@ -93,6 +112,47 @@ export default {
                     border-radius: 10px;
                 }
             }
+        }
+    }
+
+    .hobbies {
+        width: 100%;
+        margin-top: 30px;
+        padding-bottom: 10px;
+
+        .hobbies-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+
+            .hobbies-list-item {
+                width: 33%;
+                color: var(--primary-text);
+                font-size: 20px;
+                font-weight: 700;
+                border-radius: 3px;
+                padding: 10px;
+                text-align: center;
+
+                img {
+                    width: 180px;
+
+                    @include md {
+                        width: 120px;
+                    }
+                }
+
+                @include lg {
+                    font-size: 20px;
+                }
+
+                @include md {
+                    width: 50%;
+                    font-size: 18px;
+                }
+            }
+
         }
     }
 }

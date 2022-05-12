@@ -6,7 +6,7 @@
         <article id="/">
             <Home />
         </article>
-        <article id="about">
+        <article id="about" class="article-about">
             <About />
         </article>
         <article id="skills">
@@ -17,6 +17,9 @@
         </article>
         <article id="contact">
             <Contact />
+        </article>
+        <article id="footer">
+            <Footer />
         </article>
         <a href="#/">
             <div class="scroll-to-top">
@@ -30,9 +33,10 @@
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
+import Skills from "./components/Skills.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Contact from "./components/Contact.vue";
-import Skills from "./components/Skills.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
     name: "App",
@@ -43,6 +47,7 @@ export default {
         Skills,
         Portfolio,
         Contact,
+        Footer
     },
     mounted() {
         document.body.style.setProperty(
@@ -63,8 +68,8 @@ export default {
     --navbar-text: white;
     --dark-bg: rgb(12, 12, 12);
     --light-gray: #2b2c30;
-    --dark-blue: rgb(3, 3, 7);
-    --secondary-dark-blue: rgb(7, 6, 10);
+    --dark-blue: rgb(0, 0, 0);
+    --secondary-dark-blue: rgb(0, 0, 0);
 }
 
 body {
@@ -82,6 +87,10 @@ body {
 
 article {
     position: relative;
+}
+
+.article-about {
+    background-color: rgb(250, 250, 250);
 }
 
 .container {

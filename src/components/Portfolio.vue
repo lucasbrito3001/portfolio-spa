@@ -95,7 +95,7 @@ export default {
                     }
                 }
 
-                @include lg {
+                @include md {
                     width: 100%;
                     margin-top: 10px;
                 }
@@ -121,9 +121,10 @@ export default {
         @include lg {
             margin-bottom: 5px;
             writing-mode: horizontal-tb;
-            font-size: 100px;
-            right: auto;
-            left: 15px;
+            font-size: 58px;
+            right: 0;
+            top: 10px;
+            left: 0;
         }
     }
 }
