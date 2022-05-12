@@ -84,7 +84,7 @@ export default {
         box-shadow: 1px 1px 30px 1px #c2c0c0;
         width: 50px;
         height: 50px;
-        z-index: 2;
+        z-index: 1000;
     }
 }
 
@@ -96,7 +96,6 @@ nav {
     width: 100vw;
 
     @include lg {
-        z-index: 3;
         position: fixed;
         display: block;
         top: 0;

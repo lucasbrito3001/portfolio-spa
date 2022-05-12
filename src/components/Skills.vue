@@ -6,6 +6,7 @@
         <div class="container">
             <section class="professional-xp">
                 <h2 class="general-title">Experiência profissional</h2>
+                <hr>
                 <ul class="xp-list">
                     <li class="xp-list-item">
                         <h1 class="xp-list-item-title">MOVA P2P</h1>
@@ -21,9 +22,9 @@
                         <h1 class="xp-list-item-title">Lexart labs</h1>
 
                         <div class="group-xp-position">
-                            <h2>JUN 2021 ~ DEZ 2022: Frontend Developer</h2>
+                            <h2>MAR 2022: Jr. Software Architect</h2>
                             <p>
-                                Manutenção e desenvolvimento de páginas web responsivas.
+                                Manutenção e desenvolvimento de páginas web responsivas, API's REST e gerenciamento de projetos fullstack.
                             </p>
                         </div>
 
@@ -33,19 +34,21 @@
                                 Manutenção e desenvolvimento de páginas web responsivas e API's REST.
                             </p>
                         </div>
-
+                        
                         <div class="group-xp-position">
-                            <h2>MAR 2022: Jr. Software Architect</h2>
+                            <h2>JUN 2021 ~ DEZ 2022: Frontend Developer</h2>
                             <p>
-                                Manutenção e desenvolvimento de páginas web responsivas, API's REST e gerenciamento de projetos fullstack.
+                                Manutenção e desenvolvimento de páginas web responsivas.
                             </p>
                         </div>
+
                     </li>
                 </ul>
             </section>
 
             <section class="hobbies">
                 <h2 class="general-title">Hobbies</h2>
+                <hr>
                 <ul class="hobbies-list">
                     <li class="hobbies-list-item" v-for="(hobby, key) in hobbies" :key="key">
                         <img :src="hobby.image" :alt="hobby.imageAlt">
@@ -56,6 +59,7 @@
 
             <section class="skills">
                 <h2 class="general-title">Skills</h2>
+                <hr>
                 <ul
                     class="skills-list"
                 >
@@ -76,7 +80,7 @@
 export default {
     data: () => ({
         hobbies: [
-            { name: 'Games', image: require('../assets/game.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
+            { name: 'Games', image: require('../assets/game-cyan.svg'), imageAlt: 'imagem com uma pessoa jogando games no computador' },
             { name: 'Música', image: require('../assets/music-2.svg'), imageAlt: 'imagem com uma pessoa tocando violao' },
             { name: 'Esportes', image: require('../assets/sport.svg'), imageAlt: 'imagem com uma pessoa jogando futebol' },
         ],
@@ -145,12 +149,12 @@ export default {
     // background-color: rgb(255, 255, 255);
     margin-top: 50px;
     color: var(--primary-text);
-    background-color: var(--primary-text);
+    background-color: var(--secondary-dark-blue);
     background-position: left 10px;
 
 
     .section-title {
-        background-color: var(--dark-bg);
+        background-color: var(--dark-blue);
         width: 100%;
         height: 20vh;
         display: flex;
@@ -181,11 +185,12 @@ export default {
             color: white;
             width: 70%;
             margin-left: auto;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            
 
             .xp-list-item-title {
                 font-weight: 700;
-                color: #FF6F00;
+                color: #4508a8;
                 font-size: 26px;
 
                 @include lg {
@@ -198,11 +203,12 @@ export default {
             }
 
             .group-xp-position {
+                margin-top: 15px;
+
                 h2 {
                     font-weight: 700;
                     font-size: 24px;
                     color: var(--light-gray);
-                    margin-top: 15px;
     
                     @include lg {
                         font-size: 22px;
@@ -241,7 +247,7 @@ export default {
 
     .hobbies {
         width: 100%;
-        margin: 20px 0;
+        margin: 30px 0;
 
         .hobbies-list {
             display: flex;
@@ -334,6 +340,11 @@ export default {
                 padding: 0px;
             }
         }
+    }
+
+    hr {
+        border: 1px solid rgb(9, 8, 12);
+        margin-bottom: 20px;
     }
 
 }
