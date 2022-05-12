@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
 import { faBars, faClose, faChevronUp, faGamepad, faMusic, faFutbol } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare, faTwitterSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -15,7 +15,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
   faBars, 
   faClose, 
-  faGithubSquare, 
+  faGithubSquare,
+  faTwitterSquare,
+  faInstagramSquare,
+  faLinkedin,
   faChevronUp,
   faGamepad,
   faMusic,

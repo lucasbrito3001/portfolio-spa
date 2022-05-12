@@ -18,12 +18,12 @@
         <article id="contact">
             <Contact />
         </article>
-        <article id="footer">
+        <footer id="footer">
             <Footer />
-        </article>
+        </footer>
         <a href="#/">
             <div class="scroll-to-top">
-                <font-awesome-icon icon="fas-solid fa-chevron-up" class="menu" />
+                <font-awesome-icon icon="fas-solid fa-chevron-up" class="menu"/>
             </div>
         </a>
     </div>
@@ -64,12 +64,12 @@ export default {
 
 :root {
     --primary-text: rgb(15, 15, 15);
-    --secondary-text: rgb(240, 240, 240);
+    --secondary-text: rgb(194, 194, 194);
     --navbar-text: white;
-    --dark-bg: rgb(12, 12, 12);
-    --light-gray: #2b2c30;
-    --dark-blue: rgb(0, 0, 0);
-    --secondary-dark-blue: rgb(0, 0, 0);
+    --light-gray: #313236;
+    --dark: rgb(12, 12, 12);
+    --dark-purple: rgb(16, 0, 61);
+    --purple-text: #4508a8;
 }
 
 body {
@@ -119,7 +119,7 @@ ul {
     bottom: 30px;
     right: 30px;
     border-radius: 10px;
-    background-color: var(--dark-bg);
+    background-color: var(--dark);
     box-shadow: 1px 1px 20px 1px #202020;
     width: 40px;
     height: 40px;

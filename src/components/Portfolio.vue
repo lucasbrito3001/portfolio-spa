@@ -114,7 +114,7 @@ export default {
         text-align: center;
         font-size: 130px;
         font-weight: 700;
-        color: #4508a8;
+        color: var(--purple-text);
         writing-mode: vertical-rl;
         margin-bottom: 0px;
 
@@ -126,6 +126,10 @@ export default {
             top: 10px;
             left: 0;
         }
+    }
+
+    .general-title {
+        margin-bottom: 0;
     }
 }
 </style>
