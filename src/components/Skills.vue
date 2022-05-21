@@ -9,6 +9,7 @@
                 <hr>
                 <ul class="xp-list" v-for="(enterprise, keyEnterprise) in professionalXP" :key="keyEnterprise">
                     <h1 class="xp-list-title">{{ enterprise.name }}</h1>
+                    <small class="enterprise-location">{{ enterprise.local }}</small>
                     <li class="xp-list-item" v-for="(xp, keyXP) in enterprise.positions" :key="keyXP">
                         <div class="group-xp-position">
                             <h2>{{ xp.time }} - {{ xp.name }}</h2>
@@ -45,6 +46,7 @@ export default {
         professionalXP: [
             {
                 name: 'Lexartlabs',
+                local: 'Montevidéu - UY (home office)',
                 positions: [
                     { 
                         time: 'MAR 2022 ~ ATUAL', 
@@ -64,10 +66,11 @@ export default {
                 ]
             },
             { 
-                name: 'MOVA P2P', 
+                name: 'MOVA P2P',
+                local: 'Itajubá - BR (home office)',
                 positions: [
                     { 
-                        time: 'APR 2021 ~ AGO 2021', 
+                        time: 'ABR 2021 ~ AGO 2021', 
                         name: 'Desenvolvedor Front-end Jr.', 
                         description: 'Manutenção e desenvolvimento de páginas web responsivas com NuxtJS.' 
                     }
@@ -169,68 +172,75 @@ export default {
         margin-top: 10px;
     }
 
+    .enterprise-location {
+        color: var(--light-gray);
+    }
+
     .professional-xp {
         margin-top: 30px;
         margin-bottom: 50px;
 
-        .xp-list-title {
+        .xp-list {
             width: 70%;
             margin-left: auto;
-            font-weight: 700;
-            color: var(--purple-text);
-            font-size: 26px;
 
-            @include lg {
-                font-size: 24px;
-                width: 80%;
-            }
+            .xp-list-title {
+                font-weight: 700;
+                color: var(--purple-text);
+                font-size: 26px;
 
-            @include md {
-                font-size: 22px;
-                width: 100%;
-            }
-        }
-
-        .xp-list-item {
-            color: white;
-            width: 70%;
-            margin-left: auto;
-            margin-bottom: 20px;
-            
-
-
-            .group-xp-position {
-                margin-top: 15px;
-
-                h2 {
-                    font-weight: 700;
+                @include lg {
                     font-size: 24px;
-                    color: var(--secondary-text);
-    
-                    @include lg {
-                        font-size: 22px;
-                    }
-    
-                    @include md {
-                        font-size: 18px;
-                    }
+                    width: 80%;
                 }
-    
-                p {
-                    font-size: 20px;
-                    color: rgb(110, 110, 110);
-                    margin-top: 5px;
-    
-                    @include lg {
-                        font-size: 18px;
-                    }
-    
-                    @include md {
-                        font-size: 16px;
-                    }
+
+                @include md {
+                    font-size: 22px;
+                    width: 100%;
                 }
             }
 
+            .xp-list-item {
+                color: white;
+                margin-bottom: 20px;
+                
+
+
+                .group-xp-position {
+                    margin-top: 15px;
+
+                    h2 {
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: var(--secondary-text);
+        
+                        @include lg {
+                            font-size: 22px;
+                        }
+        
+                        @include md {
+                            font-size: 18px;
+                        }
+                    }
+        
+                    p {
+                        font-size: 20px;
+                        color: rgb(110, 110, 110);
+                        margin-top: 5px;
+        
+                        @include lg {
+                            font-size: 18px;
+                        }
+        
+                        @include md {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+
+            }
+            
             @include lg {
                 width: 80%;
             }
@@ -238,7 +248,6 @@ export default {
             @include md {
                 width: 100%;
             }
-
         }
     }
 
