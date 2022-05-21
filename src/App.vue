@@ -64,11 +64,11 @@ export default {
 
 :root {
     --primary-text: rgb(15, 15, 15);
-    --secondary-text: rgb(194, 194, 194);
+    --secondary-text: rgb(236, 236, 236);
     --navbar-text: white;
     --light-gray: #313236;
     --dark: rgb(12, 12, 12);
-    --dark-purple: rgb(16, 0, 61);
+    --dark-purple: rgb(18, 2, 31);
     --purple-text: #4508a8;
 }
 
