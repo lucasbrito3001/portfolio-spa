@@ -30,6 +30,7 @@ export default {
         navItems: [
             { href: '#', text: 'Inicio' },
             { href: '#about', text: 'Sobre' },
+            { href: '#skills', text: 'Profissional' },
             { href: '#portfolio', text: 'Portfolio' },
             { href: '#contact', text: 'Contatos' },
         ],
