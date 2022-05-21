@@ -4,22 +4,22 @@
             <div class="container">
                 <h1 class="general-title">VAMOS CONVERSAR</h1>
                 <p class="contact-desc">
-                    Agora você me conhece melhor! Se eu puder te ajudar de alguma forma, ou tenha se interessado pelos meus serviços, sinta-se à vontade 
-                    para entrar em contato comigo pelos caminhos listados abaixo, será um prazer trocar essa idéia contigo.
+                    Agora você me conhece melhor! Se eu puder te ajudar de alguma forma, ou tenha se interessado pelos meus serviços, 
+                    entra em contato comigo pelos caminhos listados abaixo, e bora trocar essa ideia.
                 </p>
 
                 <div class="contacts-lists">
                     <div class="container-list">
-                        <h2>Mensagens</h2>
+                        <h2>Links para mensagem</h2>
                         <ul class="message">
                             <a target="_blank" href="mailto:devlucasmail@gmail.com">
                                 <li >
-                                    <em>devlucasmail@gmail.com</em>
+                                    <b>e-mail: </b><em>devlucasmail@gmail.com</em>
                                 </li>
                             </a>
                             <a target="_blank" href="https://wa.me/+5518997351747?text=Olá Lucas, te encontrei pelo seu portfolio, gostaria de conversar com você!">
                                 <li >
-                                    <em>(18) 99735 - 1747</em>
+                                    <b>WhatsApp: </b><em>(18) 99735 - 1747</em>
                                 </li>
                             </a>
                         </ul>
@@ -88,7 +88,7 @@ export default {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 20px;
-        color: rgb(68, 182, 58);
+        color: rgb(226, 214, 37);
         
         @include lg {
             width: 90%
@@ -133,7 +133,7 @@ export default {
 
             &:hover {
                 transform: scale(1.1);
-                color: rgb(68, 182, 58);
+                color: rgb(255, 255, 255);
             }
         }
     }
@@ -141,6 +141,10 @@ export default {
     @include md {
         clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
         padding-top: 60px;
+    }
+
+    em {
+        text-decoration: underline; 
     }
 }
 </style>

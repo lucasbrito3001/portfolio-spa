@@ -13,7 +13,7 @@
                 </p>
                 <p>
                     A ascensão constante da tecnologia me traz muita curiosidade,
-                    e foi um dos fatores determinantes para o meu ingreso na área.
+                    e foi um dos fatores determinantes para o meu ingresso na área.
                 </p>
             </div>
         </div>

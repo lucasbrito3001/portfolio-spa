@@ -1,47 +1,21 @@
 <template>
     <div class="container-skills">
         <div class="section-title">
-            <h1 class="general-title">Informações pessoais e habilidades</h1>
+            <h1 class="general-title">Experiências profissionais e habilidades</h1>
         </div>
         <div class="container">
             <section class="professional-xp">
-                <h2 class="general-title">Experiência profissional</h2>
+                <h2 class="general-title">Experiências</h2>
                 <hr>
-                <ul class="xp-list">
-                    <li class="xp-list-item">
-                        <h1 class="xp-list-item-title">MOVA P2P</h1>
-
+                <ul class="xp-list" v-for="(enterprise, keyEnterprise) in professionalXP" :key="keyEnterprise">
+                    <h1 class="xp-list-title">{{ enterprise.name }}</h1>
+                    <li class="xp-list-item" v-for="(xp, keyXP) in enterprise.positions" :key="keyXP">
                         <div class="group-xp-position">
-                            <h2>APR 2021 ~ AGO 2021 - Desenvolvedor Front-end Jr.</h2>
+                            <h2>{{ xp.time }} - {{ xp.name }}</h2>
                             <p>
-                                Manutenção e desenvolvimento de páginas web responsivas com NuxtJS.
+                                {{ xp.description }}
                             </p>
                         </div>
-                    </li>
-                    <li class="xp-list-item">
-                        <h1 class="xp-list-item-title">Lexart labs</h1>
-
-                        <div class="group-xp-position">
-                            <h2>MAR 2022 - Jr. Software Architect</h2>
-                            <p>
-                                Manutenção e desenvolvimento de páginas web responsivas, API's REST e gerenciamento de projetos fullstack.
-                            </p>
-                        </div>
-
-                        <div class="group-xp-position">
-                            <h2>DEZ 2021 ~ MAR 2022 - Fullstack Developer</h2>
-                            <p>
-                                Manutenção e desenvolvimento de páginas web responsivas e API's REST.
-                            </p>
-                        </div>
-                        
-                        <div class="group-xp-position">
-                            <h2>JUN 2021 ~ DEZ 2022 - Frontend Developer</h2>
-                            <p>
-                                Manutenção e desenvolvimento de páginas web responsivas.
-                            </p>
-                        </div>
-
                     </li>
                 </ul>
             </section>
@@ -68,6 +42,38 @@
 <script>
 export default {
     data: () => ({
+        professionalXP: [
+            {
+                name: 'Lexartlabs',
+                positions: [
+                    { 
+                        time: 'MAR 2022 ~ ATUAL', 
+                        name: 'Jr. Software Architect', 
+                        description: 'Manutenção e desenvolvimento de páginas web responsivas, API\'s REST e gerenciamento de projetos e ambientes de desenvolvimento fullstack.' 
+                    },
+                    { 
+                        time: 'DEZ 2021 ~ MAR 2022', 
+                        name: 'Fullstack Developer', 
+                        description: 'Manutenção e desenvolvimento de páginas web responsivas, e API\'s REST.' 
+                    },
+                    { 
+                        time: 'JUN 2021 ~ DEZ 2021', 
+                        name: 'Front-end Developer', 
+                        description: 'Manutenção e desenvolvimento de páginas web responsivas.' 
+                    },
+                ]
+            },
+            { 
+                name: 'MOVA P2P', 
+                positions: [
+                    { 
+                        time: 'APR 2021 ~ AGO 2021', 
+                        name: 'Desenvolvedor Front-end Jr.', 
+                        description: 'Manutenção e desenvolvimento de páginas web responsivas com NuxtJS.' 
+                    }
+                ]
+            }
+        ],
         skills: [
             "JavaScript",
             "ECMAScript 6+",
@@ -153,6 +159,7 @@ export default {
 
             @include lg {
                 font-size: 40px;
+                margin-top: 20px;
             }
         }
     }
@@ -164,6 +171,25 @@ export default {
 
     .professional-xp {
         margin-top: 30px;
+        margin-bottom: 50px;
+
+        .xp-list-title {
+            width: 70%;
+            margin-left: auto;
+            font-weight: 700;
+            color: var(--purple-text);
+            font-size: 26px;
+
+            @include lg {
+                font-size: 24px;
+                width: 80%;
+            }
+
+            @include md {
+                font-size: 22px;
+                width: 100%;
+            }
+        }
 
         .xp-list-item {
             color: white;
@@ -172,19 +198,6 @@ export default {
             margin-bottom: 20px;
             
 
-            .xp-list-item-title {
-                font-weight: 700;
-                color: var(--purple-text);
-                font-size: 26px;
-
-                @include lg {
-                    font-size: 24px;
-                }
-
-                @include md {
-                    font-size: 22px;
-                }
-            }
 
             .group-xp-position {
                 margin-top: 15px;
