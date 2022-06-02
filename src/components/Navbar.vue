@@ -222,7 +222,7 @@ nav {
     from {
         transform: translateX(0px);
     } to {
-        transform: translateX(-55vw);
+        transform: translateX(-60vw);
     }
 }
 

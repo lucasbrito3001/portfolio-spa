@@ -15,6 +15,9 @@
         <article id="portfolio">
             <Portfolio />
         </article>
+        <article id="blog">
+            <Blog />
+        </article>
         <article id="contact">
             <Contact />
         </article>
@@ -35,6 +38,7 @@ import Home from "./components/Home.vue";
 import About from "./components/About.vue";
 import Skills from "./components/Skills.vue";
 import Portfolio from "./components/Portfolio.vue";
+import Blog from "./components/Blog.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 
@@ -46,6 +50,7 @@ export default {
         About,
         Skills,
         Portfolio,
+        Blog,
         Contact,
         Footer
     },
