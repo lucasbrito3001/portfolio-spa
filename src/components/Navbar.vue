@@ -11,10 +11,10 @@
                     </span>
                 </li>
                 <!-- <hr v-if="windowWidth < 768"> -->
-                <a v-for="(item, key) in navItems" :key="key" :href="item.href">
+                <a v-for="(item, key) in navItems" :key="key" :href="item.href" @click="toggleShowMenu">
                     <li>{{ item.text }}</li>
                 </a>
-                <a href="/" v-if="windowWidth < 768">
+                <a href="https://github.com/lucasbrito3001" target="_blank" v-if="windowWidth < 768">
                     <li>
                         <font-awesome-icon icon="fa-brands fa-github-square" class="github-icon"/> Meu GitHub
                     </li>
@@ -32,6 +32,7 @@ export default {
             { href: '#about', text: 'Sobre' },
             { href: '#skills', text: 'Profissional' },
             { href: '#portfolio', text: 'Portfolio' },
+            { href: '#posts', text: 'Publicações' },
             { href: '#contact', text: 'Contatos' },
         ],
         isShowingMenu: false,

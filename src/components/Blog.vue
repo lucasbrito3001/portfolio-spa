@@ -48,7 +48,7 @@ export default {
     color: var(--dark);
     padding: 0 15px;
     text-align: center;
-    margin-top: 20px;
+    padding-top: 20px;
 
     @include lg {
         font-size: 40px;
@@ -70,7 +70,7 @@ export default {
     .posts-list-item {
         width: 100%;
         box-shadow: 0px 0px 40px 2px rgb(221, 221, 221);
-        padding: 10px;
+        padding: 12px;
         border-radius: 3px;
         display: flex;
         flex-direction: row;

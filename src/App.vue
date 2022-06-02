@@ -15,7 +15,7 @@
         <article id="portfolio">
             <Portfolio />
         </article>
-        <article id="blog">
+        <article id="posts">
             <Blog />
         </article>
         <article id="contact">
