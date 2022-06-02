@@ -59,7 +59,7 @@ export default {
 .container-contacts {
     width: 100%;
     height: 100%;
-    background: rgb(31, 31, 31);
+    background: white;
 }
 
 .bg-alternative {

@@ -8,7 +8,7 @@
                     v-for="(project, key) in projects"
                     :key="key"
                 >
-                    <a :href="`https://github.com/lucasbrito3001/${project.repo}`" target="_blank">
+                    <a :href="`https://github.com/lucasbrito3001/${project.repo || ''}`" target="_blank">
                         <figure>
                             <img :src="project.image" width="100%" height="200">
                             <figcaption>
@@ -26,6 +26,8 @@
 export default {
     data: () => ({
         projects: [
+            { name: 'Loja Dexterbulls', image: require('../assets/portfolio/dexterbulls.png') },
+            { name: 'SpaceFlight News', image: require('../assets/portfolio/spaceflightnews.png'), repo: 'spaceflight-news' },
             { name: 'Conversor de cryptomoedas', image: require('../assets/portfolio/crypto-converter.png'), repo: 'cryptos-wallet' },
             { name: 'Busca de bandeiras', image: require('../assets/portfolio/flags.png'), repo: 'countries-nuxt-vuetify' },
             { name: 'Portfolio 2', image: require('../assets/portfolio/portfolio2.png'), repo: 'new-portfolio' },
