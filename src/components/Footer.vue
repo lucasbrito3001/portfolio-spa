@@ -1,5 +1,5 @@
 <template>
-    <h5 class="simple-footer">Never give up!</h5>
+    <h5 class="simple-footer">Nunca desista, você é capaz!</h5>
 </template>
 
 <script>

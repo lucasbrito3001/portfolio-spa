@@ -1,150 +1,152 @@
 <template>
-    <div class="container-contacts">
-        <div class="bg-alternative">
-            <div class="container">
-                <h1 class="general-title">VAMOS CONVERSAR</h1>
-                <p class="contact-desc">
-                    Agora você me conhece melhor! Se eu puder te ajudar de alguma forma, ou tenha se interessado pelos meus serviços, 
-                    entra em contato comigo pelos caminhos listados abaixo, e bora trocar essa ideia.
-                </p>
+  <div class="wrapper">
+    <div class="container">
+      <div class="column">
+        <h2 class="general-title">Vamos conversar</h2>
+        <p class="contacts-text">
+          Agora você me conhece melhor, se eu puder te ajudar de alguma forma,
+          ou tenha se interessado pelos meus serviços, fique a vontade para me chamar em 
+          qualquer um dos canais listados aqui. Será um prazer trocar essa ideia!
+        </p>
+      </div>
 
-                <div class="contacts-lists">
-                    <div class="container-list">
-                        <h2>Links para mensagem</h2>
-                        <ul class="message">
-                            <a target="_blank" href="mailto:devlucasmail@gmail.com">
-                                <li >
-                                    <b>e-mail: </b><em>devlucasmail@gmail.com</em>
-                                </li>
-                            </a>
-                            <a target="_blank" href="https://wa.me/+5518997351747?text=Olá Lucas, te encontrei pelo seu portfolio, gostaria de conversar com você!">
-                                <li >
-                                    <b>WhatsApp: </b><em>(18) 99735 - 1747</em>
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
+      <div class="column">
+        <h2 class="general-title">Contatos</h2>
+        <ul class="message">
+          <li class="contacts-list-item">
+            <font-awesome-icon
+              icon="fa-solid fa-envelope"
+              class="contacts-icons"
+            />
+            <span>devlucasmail@gmail.com</span>
+          </li>
+          <br />
+          <li class="contacts-list-item">
+            <font-awesome-icon
+              icon="fa-brands fa-whatsapp"
+              class="contacts-icons"
+            />
+            <span>+55 (18) 99735 - 1747</span>
+          </li>
+          
+        </ul>
+      </div>
 
-                    <div class="container-list">
-                        <h2>Redes sociais</h2>
-                        <ul class="social-networks">
-                            <a :href="social.href" v-for="(social, key) in socialNetworks" :key="key" target="_blank">
-                                <li >
-                                    <font-awesome-icon :icon="social.icon" class="contacts-icons"/>
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="column">
+        <h2 class="general-title">Redes sociais</h2>
+        <ul class="social-networks">
+          <a
+            :href="social.href"
+            v-for="(social, key) in socialNetworks"
+            :key="key"
+            target="_blank"
+          >
+            <li>
+              <font-awesome-icon :icon="social.icon" class="social-networks-icons" />
+            </li>
+          </a>
+        </ul>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data: () => ({
-        socialNetworks: [
-            { icon: 'fa-brands fa-github-square', href: "https://github.com/lucasbrito3001" },
-            { icon: 'fa-brands fa-twitter-square', href: "https://twitter.com/brito3001" },
-            { icon: 'fa-brands fa-instagram-square', href: "https://www.instagram.com/lucasdebrito12/" },
-            { icon: 'fa-brands fa-linkedin', href: "https://www.linkedin.com/in/webdevbrito/" },
-        ]
-    })
+  data: () => ({
+    socialNetworks: [
+      {
+        icon: "fa-brands fa-github-square",
+        href: "https://github.com/lucasbrito3001",
+      },
+      {
+        icon: "fa-brands fa-twitter-square",
+        href: "https://twitter.com/brito3001",
+      },
+      {
+        icon: "fa-brands fa-linkedin",
+        href: "https://www.linkedin.com/in/webdevbrito/",
+      },
+    ],
+  }),
 };
 </script>
 
 <style scoped lang="scss">
 @import "../assets/sass.scss";
-.container-contacts {
-    width: 100%;
-    height: 100%;
-    background: white;
+
+.container {
+  display: flex;
+  gap: 20px;
+
+  @include md {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
-.bg-alternative {
-    position: relative;
-    min-height: 50vh;
-    background-color: var(--dark-purple);
-    clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 0 100%);
-    padding-top: 100px;
-    color: white;
-    text-align: center;
+.contacts-text,
+.contacts-list-item {
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
 
-    .general-title {
-        color: var(--secondary-text);
-        font-size: 48px;
+.wrapper {
+  background-color: var(--dark-purple);
+  padding: 40px 20px;
+}
 
-        @include md {
-            font-size: 36px;
-        }
-    }
+.general-title {
+  color: white;
+}
 
-    .contact-desc {
-        width: 75%;
-        margin: auto;
-        text-align: left;
-        line-height: 1.5;
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: rgb(226, 214, 37);
-        
-        @include lg {
-            width: 90%
-        }
+.contacts-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-        @include md {
-            width: 100%;
-        }
-    }
+.contacts-list-item span {
+  margin-left: 15px;
+}
 
-    .contacts-lists {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: space-evenly;
+.contacts-icons {
+  width: 20px;
+  height: 20px;
+}
 
-        @include md {
-            flex-direction: column;
-        }
+.social-networks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
 
-        a {
-            color: rgb(214, 214, 214);
-            padding: 10px;
-        }
+.social-networks-icons {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  color: white;
+  transition: .4s;
+}
 
-        .container-list {
-            width: 100%;
-            margin-top: 20px;
-        }
+.social-networks-icons:hover {
+  transform: scale(1.3);
+}
 
-        .social-networks {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+.column:first-child {
+  width: 45%;
 
-        .contacts-icons {
-            font-size: 44px;
-            transition: .3s;
+  @include md {
+    width: 100%;
+  }
+}
 
-            &:hover {
-                transform: scale(1.1);
-                color: rgb(255, 255, 255);
-            }
-        }
-    }
+.column:not(:first-child) {
+  width: 27.5%;
 
-    @include md {
-        clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 100%, 0 100%);
-        padding-top: 60px;
-    }
-
-    em {
-        text-decoration: underline; 
-    }
+  @include md {
+    width: 100%;
+  }
 }
 </style>

@@ -2,9 +2,11 @@
     <div class="home-article">
         <div class="home-title">
             <h2>Olá, seja bem-vindo,</h2>
-            <h1>Meu nome é</h1>
-            <h1 class="lucas">Lucas</h1>
-            <h2 class="web-developer">E eu sou um desenvolvedor web!</h2>
+            <h2>Meu nome é</h2>
+            <strong>
+                <h1 class="lucas">Lucas de Brito</h1>
+            </strong>
+            <h2 class="web-developer">E eu sou um <strong>desenvolvedor web!</strong></h2>
         </div>
     </div>
 </template>
