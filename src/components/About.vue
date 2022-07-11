@@ -61,7 +61,7 @@ export default {
         position: relative;
         width: 100%;
 
-        // box-shadow: 1px 1px 40px 1px rgb(100, 100, 100);
+        box-shadow: 1px 1px 40px 1px rgb(100, 100, 100);
         background-color: rgb(255, 255, 255);
 
         border-radius: 10px;

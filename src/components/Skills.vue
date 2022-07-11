@@ -173,7 +173,7 @@ export default {
     }
 
     .enterprise-location {
-        color: var(--light-gray);
+        color: rgb(110, 110, 110);
     }
 
     .professional-xp {

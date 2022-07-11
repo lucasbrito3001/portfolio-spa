@@ -5,8 +5,8 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faBars, faClose, faChevronUp, faGamepad, faMusic, faFutbol } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare, faTwitterSquare, faInstagramSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faBars, faClose, faChevronUp, faGamepad, faMusic, faFutbol, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare, faTwitterSquare, faInstagramSquare, faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -22,7 +22,9 @@ library.add(
   faChevronUp,
   faGamepad,
   faMusic,
-  faFutbol
+  faFutbol,
+  faEnvelope,
+  faWhatsapp
 )
 
 /* add font awesome icon component */

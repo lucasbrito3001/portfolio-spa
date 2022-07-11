@@ -39,6 +39,7 @@ import About from "./components/About.vue";
 import Skills from "./components/Skills.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Blog from "./components/Blog.vue";
+// import Contact from "./components/Contact.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 
@@ -95,7 +96,7 @@ article {
 }
 
 .article-about {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(240, 240, 240);
 }
 
 .container {
