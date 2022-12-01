@@ -44,14 +44,25 @@
 export default {
     data: () => ({
         professionalXP: [
-            {
-                name: 'Lexartlabs',
-                local: 'Montevidéu - UY (home office)',
+            { 
+                name: 'CBYK',
+                local: 'São Paulo - BR (remoto)',
                 positions: [
                     { 
-                        time: 'MAR 2022 ~ ATUAL', 
+                        time: 'SET 2021 ~ ATUAL', 
+                        name: 'Analista de Sistemas', 
+                        description: 'Manutenção e desenvolvimento de aplicações Full Stack. Usando React, Node e SQL Server.'
+                    }
+                ]
+            },
+            {
+                name: 'Lexartlabs',
+                local: 'Montevidéu - UY (remoto)',
+                positions: [
+                    { 
+                        time: 'MAR 2022 ~ SET 2022', 
                         name: 'Jr. Software Architect', 
-                        description: 'Manutenção e desenvolvimento de páginas web responsivas, API\'s REST e gerenciamento de projetos e ambientes de desenvolvimento fullstack.' 
+                        description: 'Manutenção e desenvolvimento de páginas web responsivas, API\'s REST e gerenciamento de projetos e ambientes de desenvolvimento full stack.' 
                     },
                     { 
                         time: 'DEZ 2021 ~ MAR 2022', 
@@ -67,7 +78,7 @@ export default {
             },
             { 
                 name: 'MOVA P2P',
-                local: 'Itajubá - BR (home office)',
+                local: 'Itajubá - BR (remoto)',
                 positions: [
                     { 
                         time: 'ABR 2021 ~ AGO 2021', 
