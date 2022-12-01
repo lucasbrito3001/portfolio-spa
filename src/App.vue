@@ -75,7 +75,7 @@ export default {
     --light-gray: #313236;
     --dark: rgb(12, 12, 12);
     --dark-purple: rgb(18, 2, 31);
-    --purple-text: #4508a8;
+    --purple-text: #5007c5;
 }
 
 body {
