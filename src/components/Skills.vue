@@ -61,17 +61,17 @@ export default {
                 positions: [
                     { 
                         time: 'MAR 2022 ~ SET 2022', 
-                        name: 'Jr. Software Architect', 
+                        name: 'Arquiteto de Software Jr.', 
                         description: 'Manutenção e desenvolvimento de páginas web responsivas, API\'s REST e gerenciamento de projetos e ambientes de desenvolvimento full stack.' 
                     },
                     { 
                         time: 'DEZ 2021 ~ MAR 2022', 
-                        name: 'Fullstack Developer', 
+                        name: 'Desenvolvedor Full Stack', 
                         description: 'Manutenção e desenvolvimento de páginas web responsivas, e API\'s REST.' 
                     },
                     { 
                         time: 'JUN 2021 ~ DEZ 2021', 
-                        name: 'Front-end Developer', 
+                        name: 'Desenvolvedor Front-end', 
                         description: 'Manutenção e desenvolvimento de páginas web responsivas.' 
                     },
                 ]
@@ -82,7 +82,7 @@ export default {
                 positions: [
                     { 
                         time: 'ABR 2021 ~ AGO 2021', 
-                        name: 'Desenvolvedor Front-end Jr.', 
+                        name: 'Desenvolvedor Front-end', 
                         description: 'Manutenção e desenvolvimento de páginas web responsivas com NuxtJS.' 
                     }
                 ]
